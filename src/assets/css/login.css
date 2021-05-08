@@ -1,0 +1,88 @@
+body{
+  background-color: #F8FAFB;
+}
+
+/* Login 组件公用样式 */
+#logo {
+  width: 100px;
+  height: 27px;
+  margin: 16px auto 48px auto;
+}
+
+#logo>img {
+  width: 100%;
+  height: 100%;
+}
+
+.bdinput {
+  margin: 10px 0px;
+}
+
+
+/* 验证码样式 */
+.bdyzm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bdyzm input {
+  width: 90%;
+}
+
+.bdyzm img {
+  padding-top: 10px;
+  height: 40px;
+}
+
+
+/* 按钮样式 */
+
+#bdbutton {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0px;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: #0081FF;
+}
+
+
+/* 标题样式 */
+
+.title {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/* 分割线样式 */
+.sethr {
+  border: 0;
+  /* background-color: #e6e6e6; */
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* 返回登录 */
+.retlogin>p {
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  color: #A7B3D4;
+  font-size: 16px;
+}
+
+.retlogin span {
+  padding: 4px 6px;
+  border: 0.01rem solid black;
+  border-color: #afb8bd;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+}
+
+.retlogin span:hover {
+  background-color: #afb8bd;
+}
