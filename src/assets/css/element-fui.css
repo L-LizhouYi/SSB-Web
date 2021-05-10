@@ -1,8 +1,13 @@
-  /* 覆盖element-UI 默认样式 */
-  
-  
+/* 覆盖element-UI 默认样式 */
+
+
   /* input 样式 */
-  .el-input__inner{
+  .el-input__inner {
     border-radius: 0.5rem;
     height: 42px;
+  }
+
+
+  .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #606266;
   }

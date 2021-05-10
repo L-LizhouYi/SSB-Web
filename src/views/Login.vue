@@ -18,8 +18,8 @@ import '../assets/css/login.css'
 
 export default {
   name: 'login',
-  components: {
-
+  components: {},
+  created () {
   }
 }
 </script>

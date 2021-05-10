@@ -13,9 +13,9 @@ body{
   width: 100%;
   height: 100%;
 }
-
+/* el-input 样式 */
 .bdinput {
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
 }
 
 
