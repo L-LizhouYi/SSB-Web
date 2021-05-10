@@ -1,42 +1,31 @@
 <template>
   <div id="content">
-    <!-- 轮播图片 -->
-    <div id="limg">
-      <el-carousel trigger="click" height="500px" id="box-r">
-        <!-- <el-carousel-item v-for="item in 2" :key="item"> -->
-        <!-- <h3 class="small">{{ item }}</h3> -->
-        <!-- </el-carousel-item> -->
-
-        <el-carousel-item>
-          <img src="../assets/images/b1.jpg" alt="">
-        </el-carousel-item>
-
-        <el-carousel-item>
-          <img src="../assets/images/bg.jpg" alt="">
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-
-    <!-- 分割竖线 -->
-    <!-- <div style="height: 400px; width: 3px; background: #475669; margin-top: 50px;"></div> -->
-
-    <!-- 功能区域 -->
-    <div id="rfun">
-      <ul class="rl">
-        <ul>
-          <span>使用介绍</span><hr>
-
-        </ul>
-        <ul>
-          <span>系统公告</span><hr>
-        </ul>
-        <ul>
-          <span>赛事新闻</span><hr>
-        </ul>
-      </ul>
-      <ul class="rr">
-        <span>用户信息</span>
-      </ul>
+    <div id="l">22</div>
+    <div id="r">
+      <!-- 签到 -->
+      <div id="SignIn">
+        签到
+      </div>
+      <!-- WP投稿 -->
+      <div id="WpContribute">
+        投稿入口
+      </div>
+      <!-- 赛事 -->
+      <div id="event">
+        赛事
+      </div>
+      <!-- 最新WP -->
+      <div id="NewWp">
+        最新WriteUP
+      </div>
+      <!-- 解题动态 -->
+      <div id="dynamic">
+        解题动态
+      </div>
+      <!-- 友情链接 -->
+      <div id="Links">
+        友情链接
+      </div>
     </div>
   </div>
 </template>
@@ -44,51 +33,45 @@
 <script>
 </script>
 
-<style>
-  #content {
+<style scoped>
+  #content{
+    width: 1240px;
+    /* height: 100px; */
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
   }
-
-  #box-r {
-    border-radius: 25px;
-  }
-
-  #limg {
-    width: 900px;
-  }
-
-  #limg img {
-    width: 100%;
-    height: 100%;
-  }
-
-  #rfun {
-    width: 550px;
-    height: 500px;
-    /* background-color: chocolate; */
-
-    border: 2px solid black;
+  #l, #r{
     box-sizing: border-box;
     padding: 10px;
-
-    display: flex;
-    justify-content: space-between;
-
+    border: 1px solid;
+  }
+  #l{
+    width: 900px;
+    /* height: 100px; */
+  }
+  #r{
+    width: 340px;
+    /* height: 100px; */
   }
 
-  .rl{
-    width: 310px;
-    /* background-color: red; */
+  #r>div{
+    width: 300px;
+/*    height: 100px; */
+    /* background-color: #0081FF; */
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 0px rgb(127 127 127 / 30%);
   }
-
-  .rl > ul{
-    display: block;
-    height: 100px;
+  #r > div:nth-child(n-1){
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    height: 200px;
   }
-
-  .rr{
-    width: 200px;
-    background-color: aquamarine;
+  #SignIn{
+    height: 136px;
+    background: linear-gradient(230deg, #aa66cc, #ca9fdf) !important;
+  }
+  #WpContribute{
+    height: 200px;
   }
 </style>

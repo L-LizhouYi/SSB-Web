@@ -1,14 +1,28 @@
 <template>
   <div id="header">
-    <h1> C T F - D o c k e r</h1>
-    <!-- 导航主体 -->
-    <div id="ui">
+    <div id="l">
+      <a href="">
+        <img src="../assets/images/logo.png" alt="">
+      </a>
+    </div>
+    <ul id="c">
+      <li>首页</li>
+      <li>题目</li>
+      <li>赛事</li>
+      <li>动态</li>
+      <li>公告</li>
+      <li>WP库</li>
+      <li>排行榜</li>
+      <li>战队</li>
+      <li>商城</li>
+      <li>赛事中心</li>
+      <li>更多</li>
+    </ul>
+    <div id="r" style="">
       <ul>
-        <router-link to="/login" tag="li"><span>答题</span></router-link>
-        <router-link to="/login" tag="li"><span>竞赛</span></router-link>
-        <router-link to="/login" tag="li"><span>排行榜</span></router-link>
-        <router-link to="/login" tag="li"><span>队伍</span></router-link>
-        <router-link to="/login" tag="li"><span>登录</span></router-link>
+        <img src="" alt="">
+        <router-link to="/login/login" tag="li">登录</router-link>
+        <router-link to="/login/registered" tag="li">注册</router-link>
       </ul>
     </div>
   </div>
@@ -18,37 +32,83 @@
 </script>
 
 <style scoped>
-  #header > h1{
-    padding: 20px;
-    text-align: center;
-  }
-  #ui > ul{
-    height: 60px;
-    box-sizing: border-box;
-    margin: 10px 20px;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,1);
-    box-shadow: 0px 10px 10px 20px rgb(0 0 0 / 6%);
-
+  #header{
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
-
-  #ui li{
+  #l a{
     display: inline-block;
-    width: 100px;
-    text-align: center;
-    line-height: 50px;
-    margin: 5px 80px;
-    box-sizing: border-box;
-    font-size: 18px;
-    font-weight: 700;
-    color: #757575;
+    width: 150px;
+    height: 75px;
+    position: relative;
+  }
+  #l a>img{
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  #c {
+    width: 940px;
+    padding: 0px  90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  #c >li{
+    cursor: pointer;
+    padding: 6px 15px;
+    border-radius: 8px;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  #c >li:nth-child(1){
+    background-color: #0081FF;
+    color: white;
+  }
+  #c li:nth-child(n+2):hover{
+    color: black;
+  }
+  #r{
+    width: 185px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #r img{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+
+  }
+  #r ul{
+    width: 100%;
+    margin: auto 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #r ul>li{
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #0081FF;
+    color: #0081FF;
+    padding: 5px 12px;
+    border-radius: 20px;
   }
 
-  #ui li:hover{
-    cursor: pointer;
-    color: #50a1ff;
-    border-bottom: 4px solid #757575;
+  #r ul li:nth-child(2){
+    background-color: #0081FF;
+    border: 1px solid #0081FF;
+    color: white;
+  }
+  #r ul li:hover{
+    background-color: #0081FF;
+    border: 1px solid #0081FF;
+    color: white;
   }
 </style>
