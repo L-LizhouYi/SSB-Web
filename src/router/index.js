@@ -5,12 +5,34 @@ Vue.use(Router)
 
 export default new Router({
   routes: [{
-    path: '/index',
-    name: 'index',
+    path: '/',
+    name: 'root',
     component: resolve => {
       require(['@/views/Index'], resolve)
-    }
+    },
+    children: [
+      {
+        path: '/index',
+        component: resolve => {
+          require(['@/components/Icontent'], resolve)
+        }
+      },
+      {
+        path: '/topic',
+        component: resolve => {
+          require(['@/components/Topic'], resolve)
+        }
+      }
+    ],
+    redirect: '/index'
   },
+  // {
+  //   path: '/topic',
+  //   name: 'topic',
+  //   component: resolve => {
+  //     require(['@/components/Topic'], resolve)
+  //   }
+  // },
   {
     path: '/login',
     name: 'login',
@@ -19,7 +41,7 @@ export default new Router({
     },
     children: [
       {
-        path: 'login',
+        path: '/',
         component: resolve => {
           require(['@/components/Llogin'], resolve)
         }
@@ -37,11 +59,11 @@ export default new Router({
         }
       }
     ],
-    redirect: '/login/login'
+    redirect: '/login/'
   },
   {
     path: '*',
-    redirect: '/index'
+    redirect: '/'
   }
   ]
 })

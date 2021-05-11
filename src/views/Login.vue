@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    <router-link to="/login/login">login</router-link><br>
+    <router-link to="/login/">login</router-link><br>
     <router-link to="/login/registered">registered</router-link><br>
     <router-link to="/login/reset">reset</router-link>
     <div id="content">
@@ -15,7 +15,6 @@
 <script>
 import '../assets/css/element-fui.css'
 import '../assets/css/login.css'
-
 export default {
   name: 'login',
   components: {},

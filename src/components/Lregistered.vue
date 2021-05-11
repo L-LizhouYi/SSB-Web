@@ -33,7 +33,7 @@
 
     <div class="retlogin">
       <p>已有账号 ? </p>
-      <p><router-link to="/login/login" tag="span">登录 ! </router-link></p>
+      <p><router-link to="/login/" tag="span">登录 ! </router-link></p>
     </div>
 
   </div>

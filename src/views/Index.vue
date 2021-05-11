@@ -4,20 +4,17 @@
       <Header></Header>
     </div>
     <div id="content">
-      <Content></Content>
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Iheader'
-import Content from '@/components/Icontent'
-
 export default{
   name: 'Index',
   components: {
-    Header,
-    Content
+    Header
   }
 }
 
@@ -27,7 +24,6 @@ export default{
   #index{
     width: 100%;
     height: 100%;
-    background-color: #F8FAFB;
   }
   #header{
     width: 100%;
@@ -36,7 +32,9 @@ export default{
     box-shadow: 0px 5px 10px -10px rgb(0 0 0 / 40%);
   }
   #content{
-    margin-top: 10px;
-    background-color: #F8FAFB;
+    width: 1240px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    color: #505050;
   }
 </style>

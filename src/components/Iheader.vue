@@ -1,13 +1,13 @@
 <template>
-  <div id="header">
+  <div id="Iheader">
     <div id="l">
       <a href="">
         <img src="../assets/images/logo.png" alt="">
       </a>
     </div>
     <ul id="c">
-      <li>首页</li>
-      <li>题目</li>
+      <router-link to="/" tag="li">首页</router-link>
+      <router-link to="/topic" tag="li">题目</router-link>
       <li>赛事</li>
       <li>动态</li>
       <li>公告</li>
@@ -21,7 +21,7 @@
     <div id="r" style="">
       <ul>
         <img src="" alt="">
-        <router-link to="/login/login" tag="li">登录</router-link>
+        <router-link to="/login/" tag="li">登录</router-link>
         <router-link to="/login/registered" tag="li">注册</router-link>
       </ul>
     </div>
@@ -32,7 +32,7 @@
 </script>
 
 <style scoped>
-  #header{
+  #Iheader{
     width: 1240px;
     height: 100%;
     margin: 0 auto;

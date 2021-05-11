@@ -21,7 +21,7 @@
     </div>
     <hr class="sethr">
     <div class="retlogin">
-      <p><router-link to="/index" tag="span">返回首页</router-link></p>
+      <p><router-link to="/" tag="span">返回首页</router-link></p>
     </div>
   </div>
 </template>
