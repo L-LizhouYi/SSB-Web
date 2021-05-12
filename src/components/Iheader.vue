@@ -6,17 +6,11 @@
       </a>
     </div>
     <ul id="c">
-      <router-link to="/" tag="li">首页</router-link>
-      <router-link to="/topic" tag="li">题目</router-link>
-      <li>赛事</li>
-      <li>动态</li>
-      <li>公告</li>
-      <li>WP库</li>
-      <li>排行榜</li>
-      <li>战队</li>
-      <li>商城</li>
-      <li>赛事中心</li>
-      <li>更多</li>
+      <router-link
+       v-for="item in headbar"
+      :key="item.name"
+      :to="item.path"
+      tag="li">{{ item.name }}</router-link>
     </ul>
     <div id="r" style="">
       <ul>
@@ -29,6 +23,58 @@
 </template>
 
 <script>
+export default{
+  data () {
+    return {
+      headbar: [
+        {
+          path: '/',
+          name: '首页'
+        },
+        {
+          path: '/topic',
+          name: '题目'
+        },
+        {
+          path: '/',
+          name: '赛事'
+        },
+        {
+          path: '/',
+          name: '动态'
+        },
+        {
+          path: '/',
+          name: '公告'
+        },
+        {
+          path: '/',
+          name: 'WP库'
+        },
+        {
+          path: '/',
+          name: '排行榜'
+        },
+        {
+          path: '/',
+          name: '战队'
+        },
+        {
+          path: '/',
+          name: '商城'
+        },
+        {
+          path: '/',
+          name: '赛事中心'
+        },
+        {
+          path: '/',
+          name: '更多'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -66,7 +112,7 @@
     font-size: 15px;
     font-weight: 500;
   }
-  #c >li:nth-child(1){
+ #c >li:nth-child(1){
     background-color: #0081FF;
     color: white;
   }

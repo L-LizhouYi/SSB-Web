@@ -35,6 +35,7 @@
           <h3>个人榜</h3>
           <el-table
                 :data="ListData.Personal"
+                :header-cell-style="{fontSize: '2px',fontWeight: '400', color: '#000'}"
                 style="width: 100%">
                 <el-table-column
                   prop="Rank"
@@ -59,6 +60,7 @@
           <h3>战队榜</h3>
           <el-table
                 :data="ListData.Personal"
+                :header-cell-style="{fontSize: '2px',fontWeight: '400', color: '#000'}"
                 style="width: 100%">
                 <el-table-column
                   prop="Rank"
@@ -301,13 +303,13 @@ export default {
   #Clan,
   #Personal {
     width: 420px;
-    /* height: 500px; */
+    box-sizing: border-box;
+    padding: 0px 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgb(127 127 127 / 30%);
     overflow: hidden;
   }
-
   #News {
     height: 400px;
   }

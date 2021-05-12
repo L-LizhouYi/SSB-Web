@@ -11,3 +11,8 @@
   .el-checkbox__input.is-checked+.el-checkbox__label {
     color: #606266;
   }
+
+/* 覆盖表格样式 :hover */
+  .el-table--enable-row-hover .el-table__body tr:hover>td{
+    background-color: transparent !important;
+  }

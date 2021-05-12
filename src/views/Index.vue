@@ -11,6 +11,7 @@
 
 <script>
 import Header from '@/components/Iheader'
+import '../assets/css/element-fui.css'
 export default{
   name: 'Index',
   components: {
