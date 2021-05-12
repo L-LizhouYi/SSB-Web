@@ -82,7 +82,9 @@
         </div>
       </div>
       <!-- 最新动态 -->
-      <div id="News"></div>
+      <div id="News">
+        <h3>最新动态</h3>
+      </div>
     </div>
     <div class="r">
       <!-- 签到 -->
@@ -101,15 +103,20 @@
       </div>
       <!-- 最新WP -->
       <div id="NewWp">
-        最新WriteUP
+        <h4>最新WriteUP</h4>
       </div>
       <!-- 解题动态 -->
-      <div id="dynamic">
-        解题动态
+      <div id="Dynamic">
+        <h4>解题动态</h4>
       </div>
       <!-- 友情链接 -->
       <div id="Links">
-        友情链接
+        <h4>友情链接</h4>
+        <ul>
+          <li>1234</li>
+          <li>343242</li>
+          <li>23123214</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -311,7 +318,9 @@ export default {
     overflow: hidden;
   }
   #News {
-    height: 400px;
+    box-sizing: border-box;
+    padding: 24px;
+    text-align: center;
   }
 
   /* ----------------------------------------------- */
@@ -338,5 +347,12 @@ export default {
     border-radius: 10px;
     margin: 10px 0px;
     font-weight: 600;
+  }
+  #NewWp, #Dynamic, #Links {
+    box-sizing: border-box;
+    padding: 24px;
+  }
+  #NewWp, #Dynamic, #Links h4{
+    margin-bottom: 32px;
   }
 </style>

@@ -28,7 +28,7 @@
           </span>
         </p>
         <el-form-item>
-          <el-button type="primary" id="bdbutton" size="medium">登录</el-button>
+          <el-button type="primary" id="bdbutton" size="medium" @click="submitForm('form')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -37,7 +37,11 @@
 
 <script>
 // 导入规则
-import { rulesUsername, rulesPassword } from '../assets/js/login.js'
+import {
+  rulesUsername,
+  rulesPassword
+} from '../assets/js/login.js'
+import * as API from '../api/v1.js'
 export default {
   data () {
     return {
@@ -49,13 +53,51 @@ export default {
       },
       // 表单验证规则
       rules: {
-        username: [
-          { required: true, validator: rulesUsername, trigger: 'blur' }
-        ],
-        password: [
-          { required: true, validator: rulesPassword, trigger: 'blur' }
-        ]
+        username: [{
+          required: true,
+          validator: rulesUsername,
+          trigger: 'blur'
+        }],
+        password: [{
+          required: true,
+          validator: rulesPassword,
+          trigger: 'blur'
+        }]
       }
+    }
+  },
+
+  methods: {
+    // Login 点击登录触发
+    Login () {
+      API.userLogin(this.form).then(response => {
+        if (response.code !== 0) {
+          this.$notify.error({
+            title: '错误',
+            message: response.msg
+          })
+          return
+        }
+        // 把token放入localStorage
+        localStorage.setItem('token', response.data.token_type + ' ' + response.data.access_token)
+        this.$notify.success({
+          title: '登录成功',
+          message: '正在跳转到主页.'
+        })
+        setTimeout(() => {
+          this.$router.push('/index')
+          window.location.reload()
+        }, 1000)
+      })
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.Login()
+        } else {
+          return false
+        }
+      })
     }
   }
 }

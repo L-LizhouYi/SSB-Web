@@ -18,7 +18,16 @@ import '../assets/css/login.css'
 export default {
   name: 'login',
   components: {},
-  created () {
+  created () {},
+  methods: {
+    // 成功
+    success () {
+      this.$notify({
+        title: '成功',
+        message: '这是一条成功的提示消息',
+        type: 'success'
+      })
+    }
   }
 }
 </script>
