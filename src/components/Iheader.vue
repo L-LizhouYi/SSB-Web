@@ -109,6 +109,7 @@ export default{
   created () {
     this.checkJwt()
   },
+
   methods: {
     // 检查token
     checkJwt () {

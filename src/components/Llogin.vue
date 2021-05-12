@@ -13,7 +13,7 @@
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
-          <el-input class="bdinput" v-model="form.password" placeholder="密码" show-password clearable></el-input>
+          <el-input class="bdinput" v-model="form.password" placeholder="密码" @keyup.enter.native="submitForm('form')" show-password clearable></el-input>
         </el-form-item>
         <!-- 验证码 -->
         <p class="bdyzm">
@@ -28,7 +28,12 @@
           </span>
         </p>
         <el-form-item>
-          <el-button type="primary" id="bdbutton" size="medium" @click="submitForm('form')">登录</el-button>
+          <el-button
+          type="primary"
+          id="bdbutton"
+          size="medium"
+          @click="submitForm('form')"
+          :loading="loading_button">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -45,6 +50,7 @@ import * as API from '../api/v1.js'
 export default {
   data () {
     return {
+      loading_button: false,
       form: {
         username: '',
         password: '',
@@ -66,16 +72,26 @@ export default {
       }
     }
   },
-
+  created () {
+    // 判断是否已经登录
+    API.userMe().then(request => {
+      if (request.code === 0) {
+        this.$router.push('/index')
+      }
+    })
+  },
   methods: {
     // Login 点击登录触发
     Login () {
+      this.loading_button = true
+
       API.userLogin(this.form).then(response => {
         if (response.code !== 0) {
           this.$notify.error({
             title: '错误',
             message: response.msg
           })
+          this.loading_button = false
           return
         }
         // 把token放入localStorage

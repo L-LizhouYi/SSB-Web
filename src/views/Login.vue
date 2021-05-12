@@ -1,8 +1,8 @@
 <template>
   <div id="login">
-    <router-link to="/login/">login</router-link><br>
+<!--    <router-link to="/login/">login</router-link><br>
     <router-link to="/login/registered">registered</router-link><br>
-    <router-link to="/login/reset">reset</router-link>
+    <router-link to="/login/reset">reset</router-link> -->
     <div id="content">
       <!-- 登录 -->
       <!-- 注册 -->
